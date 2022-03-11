@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EmpRecordsData>
+	<Ecode Id="E001" EmployeeNmae="XuMinghao">
+		<EmpDetails DateOfJoin="02-02-1999" Gread="A" Salary="17500" />
+	</Ecode>
+	<Ecode Id="E002" EmployeeNmae="JieMengyao">
+		<EmpDetails DateOfJoin="02-02-1999" Gread="A" Salary="17500" />
+	</Ecode>
+	<Ecode Id="E003" EmployeeNmae="Wukai">
+		<EmpDetails DateOfJoin="02-02-1999" Gread="A" Salary="17500" />
+	</Ecode>
+	<Ecode Id="E004" EmployeeNmae="Tianyin">
+		<EmpDetails DateOfJoin="02-02-1999" Gread="A" Salary="17500" />
+	</Ecode>
+	<Ecode Id="E005" EmployeeNmae="Chengang">
+		<EmpDetails DateOfJoin="02-02-1999" Gread="A" Salary="17500" />
+	</Ecode>
+</EmpRecordsData>
