@@ -69,6 +69,9 @@ namespace CMSWinFormsApp
             else
             {
                 //database code
+                sqlDataAdapter1.Update(customerDataSet1);
+                MessageBox.Show("Database updated!");
+
             }
         }
 
@@ -80,6 +83,41 @@ namespace CMSWinFormsApp
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            customerDataSet1.Clear();
+            sqlDataAdapter1.Fill(customerDataSet1);
+            //edit
+            CurrentPosition();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            btnNext.BindingContext[customerDataSet1, "tblCustomer"].Position += 1;
+            CurrentPosition();
+        }
+
+        private void CurrentPosition()
+        {
+            int currentPosition, ctr;
+            ctr = this.BindingContext[customerDataSet1, "tblCustomer"].Position += 1;
+            if(ctr == 0)
+            {
+                textBox5.Text = "No Records";
+            }
+            else
+            {
+                currentPosition = this.BindingContext[customerDataSet1, "tblCustomer"].Position + 1;
+                textBox5.Text = currentPosition.ToString()+" of " + ctr.ToString();
+            }
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            btnPrevious.BindingContext[customerDataSet1, "tblCustomer"].Position -= 1;
+            CurrentPosition();
         }
     }
 }
